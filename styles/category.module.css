@@ -1,0 +1,31 @@
+.container {
+  background: white;
+  padding: 2% 7%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.cateTitlte {
+  background: rgb(14, 96, 150);
+  margin: 5px;
+  padding: 0 7px;
+  border-radius: 5px;
+}
+.subCategoryList {
+  color: black;
+  margin-left: 30px;
+  font-size: 20px;
+}
+.subCategoryList > li {
+  margin-top: 10px;
+}
+.subCategoryList > li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+@media only screen and (max-width: 778px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,161 @@
+.container {
+  background: rgb(238, 238, 238);
+}
+.mainContainer {
+  margin: 1%;
+  background: white;
+  color: black;
+  padding: 1%;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+.warning {
+  height: 80vh;
+
+  padding: 15% 5%;
+}
+.warningTitle {
+  font-size: 45px;
+}
+.warningText {
+  font-size: 26px;
+}
+.adultAgreedButton {
+  margin-top: 20px;
+  background: rgb(14, 159, 14);
+  padding: 10px 25px;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.adultAgreedButton:hover {
+  background: rgb(16, 171, 206);
+}
+.adultDisgreedButton {
+  margin-top: 20px;
+  background: rgb(217, 33, 33);
+  padding: 10px 25px;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.adultDisgreedButton:hover {
+  background: rgb(16, 171, 206);
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+}
+.breadcrumbs > li {
+  list-style: none;
+}
+.breadcrumbs > li:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.premiumpostTitle {
+  font-size: 20px;
+  width: 250px;
+  padding-left: 10px;
+  font-weight: 600;
+  color: black;
+  background-image: linear-gradient(
+    to right,
+    rgb(202, 202, 202),
+    rgb(255, 255, 255)
+  );
+}
+
+.premiumpostTitle2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  width: 400px;
+  padding-left: 10px;
+  font-weight: 600;
+  color: black;
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 62, 62),
+    rgb(255, 255, 255)
+  );
+}
+.freepostTitle {
+  font-size: 20px;
+  margin-top: 20px;
+  width: 400px;
+  padding-left: 10px;
+  font-weight: 600;
+  color: black;
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 165, 62),
+    rgb(255, 255, 255)
+  );
+}
+.freepostTitle2 {
+  font-size: 20px;
+  margin-top: 20px;
+  width: 250px;
+  padding-left: 10px;
+  font-weight: 600;
+  color: black;
+  background-image: linear-gradient(
+    to right,
+    rgb(202, 202, 202),
+    rgb(255, 255, 255)
+  );
+}
+.productContainer h1 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.productContainer h1:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.othersLinkImage {
+  width: 100%;
+}
+.othersLinkContainer {
+  margin: 10px;
+  border: 1px solid lightgray;
+}
+.paginate {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.paginateSearch {
+  width: 50px;
+}
+
+@media only screen and (max-width: 778px) {
+   .breadcrumbs{
+    font-size: 10px;
+    gap: 3px;
+   }
+   .productContainer h1{
+    font-size: 10px;
+    padding: 2%;
+   }
+   .othersLink{
+    display: none;
+   }
+   .premiumpostTitle2 , .premiumpostTitle , .freepostTitle2 , .freepostTitle{
+    font-size: 16px;
+   }
+  
+  }
+  

@@ -1,0 +1,32 @@
+.container {
+  background: rgb(244, 244, 244);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.footer {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+.item {
+  list-style: none;
+  font-size: 20px;
+}
+@media only screen and (max-width: 778px) {
+  .container {
+    height: 200px;
+  }
+  .footer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hr{
+    width: 100px;
+  }
+}
