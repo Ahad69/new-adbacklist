@@ -27,7 +27,6 @@ export default function Home() {
             </li>
           </ul>
         </div>
-
         {data?.map((c) => (
           <div className={styles.country} id={c.name}>
             <h1 className={styles.countryTitle}>{c.name}</h1>
@@ -38,6 +37,7 @@ export default function Home() {
                 <div className={styles.state}>
                   {a?.children?.map((b) => (
                     <Link
+                      key={b.name}
                       href={`/${c.name}/${a.name}/${b.name}`}
                       className={styles.cityname}
                     >
