@@ -29,7 +29,7 @@ const Login = () => {
     const data = { ...state, isLoading: true };
 
     await axios
-      .post("http://localhost:5000/api/users/login", data)
+      .post("https://back-hue-backend.vercel.app/api/users/login", data)
 
       .then((response) => {
        
@@ -50,8 +50,9 @@ const Login = () => {
         }
       })
       .catch((error) => {
+        console.log(error)
         setIsLoading(false);
-        setState({ ...state, emailError: error.response.data.message });
+        setState({ ...state, emailError: error.response?.data?.message });
       });
   };
 

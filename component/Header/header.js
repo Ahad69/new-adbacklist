@@ -9,7 +9,7 @@ const Header = ({ data }) => {
         <Link href={`/`}>
           <img className={style.image} src="/logo.png" />
         </Link>
-        <button className={style.postButton}> + Add Post</button>
+        <Link href={'/user/post'}><button className={style.postButton}> + Add Post </button></Link>
       </div>
 
       <div className={style.location}>

@@ -44,7 +44,7 @@ const Register = () => {
     data["month"] = month;
 
     await axios
-      .post("http://localhost:5000/api/users", data)
+      .post("https://back-hue-backend.vercel.app/api/users", data)
       .then((response) => {
         if (response.data.message == "success") {
           setIsLoading(false);

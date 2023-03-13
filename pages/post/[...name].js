@@ -45,7 +45,7 @@ const Post = () => {
   async function getUser() {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/products/all?page=${page}&category=${router?.query?.name?.[4]}`
+        `https://back-hue-backend.vercel.app/api/products/all?page=${page}&category=${router?.query?.name?.[4]}`
       );
 
       const forcity = response.data.data.products?.filter(
@@ -144,7 +144,7 @@ const Post = () => {
 
   async function getAds() {
     try {
-      const response = await axios.get(`http://localhost:5000/api/sideads`);
+      const response = await axios.get(`https://back-hue-backend.vercel.app/api/sideads`);
       const data = response.data.ads;
       const category = data
         .filter((a) => a?.category == router?.query?.name?.[3])
