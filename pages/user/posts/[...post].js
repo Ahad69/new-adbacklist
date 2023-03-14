@@ -27,22 +27,7 @@ const initialState = {
   error: "",
 };
 
-// const beforeUpload = (file) => {
-//   const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png';
-//   if (!isJpgOrPng) {
-//      message.error('You can only upload JPG/PNG file!');
-//      return
-//   }
-  
-//   const isLt2M = file.size / 1024 / 1024 < 2;
-//   console.log(isLt2M)
-//   if (!isLt2M) {
-//      message.error('Image must smaller than 2MB!');
-//      return
-    
-//   }
-//   return isJpgOrPng && isLt2M;
-// };
+
 
 const Post = () => {
   const router = useRouter();
@@ -225,18 +210,7 @@ const Post = () => {
           <div>
             <div>
               <div className={style.imageContainer}>
-                {/* <ImgCrop rotationSlider>
-                  <Upload
-                    action={false}
-                    listType="picture-card"
-                    fileList={fileList}
-                    onChange={onChange}
-                    onPreview={onPreview}
-                    beforeUpload={beforeUpload}
-                  >
-                    {fileList.length < 4 && "+ Upload"}
-                  </Upload>
-                </ImgCrop> */}
+        
               </div>
             </div>
 
