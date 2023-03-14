@@ -5,8 +5,6 @@ import style from "../../../styles/login.module.css";
 import Swal from "sweetalert2";
 import Cookies from "js-cookie";
 import jwt_decode from "jwt-decode";
-import { message, Upload } from "antd";
-import ImgCrop from "antd-img-crop";
 import Header from "@/component/Header/header";
 import Footer from "@/component/Footer/footer";
 
@@ -29,22 +27,22 @@ const initialState = {
   error: "",
 };
 
-const beforeUpload = (file) => {
-  const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png';
-  if (!isJpgOrPng) {
-     message.error('You can only upload JPG/PNG file!');
-     return
-  }
+// const beforeUpload = (file) => {
+//   const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png';
+//   if (!isJpgOrPng) {
+//      message.error('You can only upload JPG/PNG file!');
+//      return
+//   }
   
-  const isLt2M = file.size / 1024 / 1024 < 2;
-  console.log(isLt2M)
-  if (!isLt2M) {
-     message.error('Image must smaller than 2MB!');
-     return
+//   const isLt2M = file.size / 1024 / 1024 < 2;
+//   console.log(isLt2M)
+//   if (!isLt2M) {
+//      message.error('Image must smaller than 2MB!');
+//      return
     
-  }
-  return isJpgOrPng && isLt2M;
-};
+//   }
+//   return isJpgOrPng && isLt2M;
+// };
 
 const Post = () => {
   const router = useRouter();
@@ -176,24 +174,24 @@ const Post = () => {
     }
   };
 
-  const [fileList, setFileList] = useState([]);
-  const onChange = ({ fileList: newFileList }) => {
-    setFileList(newFileList);
-  };
-  const onPreview = async (file) => {
-    let src = file.url;
-    if (!src) {
-      src = await new Promise((resolve) => {
-        const reader = new FileReader();
-        reader.readAsDataURL(file.originFileObj);
-        reader.onload = () => resolve(reader.result);
-      });
-    }
-    const image = new Image();
-    image.src = src;
-    const imgWindow = window.open(src);
-    imgWindow?.document.write(image.outerHTML);
-  };
+  // const [fileList, setFileList] = useState([]);
+  // const onChange = ({ fileList: newFileList }) => {
+  //   setFileList(newFileList);
+  // };
+  // const onPreview = async (file) => {
+  //   let src = file.url;
+  //   if (!src) {
+  //     src = await new Promise((resolve) => {
+  //       const reader = new FileReader();
+  //       reader.readAsDataURL(file.originFileObj);
+  //       reader.onload = () => resolve(reader.result);
+  //     });
+  //   }
+  //   const image = new Image();
+  //   image.src = src;
+  //   const imgWindow = window.open(src);
+  //   imgWindow?.document.write(image.outerHTML);
+  // };
 
   return (
     <div>
@@ -227,7 +225,7 @@ const Post = () => {
           <div>
             <div>
               <div className={style.imageContainer}>
-                <ImgCrop rotationSlider>
+                {/* <ImgCrop rotationSlider>
                   <Upload
                     action={false}
                     listType="picture-card"
@@ -238,7 +236,7 @@ const Post = () => {
                   >
                     {fileList.length < 4 && "+ Upload"}
                   </Upload>
-                </ImgCrop>
+                </ImgCrop> */}
               </div>
             </div>
 
